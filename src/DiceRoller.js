@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Die from "./Die";
+import "./DiceRoller.css";
 
 export default class DiceRoller extends Component {
     state = { die1: 1, die2: 1 };
@@ -12,10 +13,12 @@ export default class DiceRoller extends Component {
 
     render() {
         return (
-            <div>
+            <div className="DiceRoller">
                 <h1>Dice roller</h1>
-                <Die dieNumber={this.state.die1} />
-                <Die dieNumber={this.state.die2} />
+                <div className="DiceRoller-container">
+                    <Die dieNumber={this.state.die1} />
+                    <Die dieNumber={this.state.die2} />
+                </div>
                 <button onClick={this.roll}>Roll dice!</button>
             </div>
         );
