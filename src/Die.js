@@ -11,7 +11,7 @@ export default class Die extends Component {
         let shakingClass = this.props.isRolling ? "shaking" : " ";
         return (
             <span>
-                <i className={"Die fas " + this.props.diceClasses[this.props.dieNumber] + " " + shakingClass} />
+                <i className={`Die fas ${this.props.diceClasses[this.props.dieNumber]} ${shakingClass}`} />
             </span>
         );
     }
